@@ -1,4 +1,4 @@
-const userId = "1342795067609448490"; 
+const userId = "1342795067609448490";
 const apiUrl = `https://api.lanyard.rest/v1/users/${userId}`;
 
 fetch(apiUrl)
@@ -8,42 +8,63 @@ fetch(apiUrl)
     const status = data.data.discord_status;
     const activities = data.data.activities;
 
-    // Update avatar image
     document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${userId}/${user.avatar}.png`;
 
-    // Show only the button of the current status, hide others
     document.querySelectorAll(".status-btn").forEach(btn => {
       if (btn.dataset.status === status) {
-        btn.style.display = "inline-block";  // show current status button
+        btn.style.display = "inline-block";
       } else {
-        btn.style.display = "none";           // hide others
+        btn.style.display = "none";
       }
     });
 
-    // Playing activity text
-    const playingActivity = activities.find(
-      act => act.type === 0 || act.type === 2 || act.name === "Spotify"
-    );
-
     const playingText = document.getElementById("playing");
+    const activityBox = document.getElementById("activity-box");
+    activityBox.innerHTML = ""; // Clear previous
+
+    const spotify = activities.find(act => act.name === "Spotify");
+    const game = activities.find(act => act.type === 0 && act.name !== "Spotify");
+
     if (playingText) {
-      if (playingActivity) {
-        if (playingActivity.name === "Spotify") {
-          playingText.textContent = `🎧 Listening to ${playingActivity.details} by ${playingActivity.state}`;
-        } else {
-          playingText.textContent = `🎮 Playing: ${playingActivity.name}`;
-        }
+      if (spotify) {
+        playingText.textContent = ``;
+      } else if (game) {
+        playingText.textContent = ``;
       } else {
-        playingText.textContent = ""; // empty if no activity, no message
+        playingText.textContent = "";
       }
+    }
+
+    if (spotify) {
+      const spotifyBox = `
+        <div class="activity spotify">
+          <p class="activity-title">
+            Listening to Spotify <img src="assets/spotify1.png" class="activity-icon" />
+          </p>
+          <img src="${spotify.assets?.large_image?.startsWith("spotify:") ? 
+            `https://i.scdn.co/image/${spotify.assets.large_image.replace("spotify:", "")}` : 
+            'assets/music.png'}" class="song-icon" />
+          <p class="song-name">${spotify.details}</p>
+          <p class="song-artist">${spotify.state}</p>
+        </div>
+      `;
+      activityBox.innerHTML += spotifyBox;
     }
   })
   .catch(err => {
     console.error("API Error:", err);
-    const playingText = document.getElementById("playing");
-    if (playingText) playingText.textContent = "";
+    document.getElementById("playing").textContent = "";
+    document.getElementById("activity-box").innerHTML = "";
     document.querySelectorAll(".status-btn").forEach(btn => btn.style.display = "none");
   });
+
+function formatTime(startTimestamp) {
+  const diff = Date.now() - startTimestamp;
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(minutes / 60);
+  const remaining = minutes % 60;
+  return hours > 0 ? `${hours}h ${remaining}m` : `${remaining}m`;
+}
 
 document.addEventListener("mousemove", function (e) {
   const cursor = document.querySelector(".custom-cursor");
@@ -51,27 +72,20 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.top = `${e.clientY}px`;
 });
 
-// Fix for music autoplay blocking by browsers:
-// Play muted autoplay on load, then unmute and play on first user interaction.
 window.addEventListener('load', () => {
   const music = document.getElementById('background-music');
   if (music) {
     music.volume = 0.9;
-    music.muted = true;  // start muted to allow autoplay
-    music.play().catch(() => {
-      // Autoplay blocked, silently ignore
-    });
+    music.muted = true;
+    music.play().catch(() => {});
   }
 });
 
-// Unmute and play music on first user interaction (click or keypress)
 function unmuteAndPlay() {
   const music = document.getElementById('background-music');
   if (music && music.muted) {
     music.muted = false;
-    music.play().catch(() => {
-      // ignore play errors
-    });
+    music.play().catch(() => {});
   }
   window.removeEventListener('click', unmuteAndPlay);
   window.removeEventListener('keydown', unmuteAndPlay);
@@ -79,11 +93,8 @@ function unmuteAndPlay() {
 window.addEventListener('click', unmuteAndPlay);
 window.addEventListener('keydown', unmuteAndPlay);
 
-// --- New code for blur + overlay reveal ---
 const container = document.querySelector('.container');
 const overlay = document.getElementById('overlay');
-
-// Start blurred and overlay visible
 container.classList.add('blur');
 
 function revealSite() {
@@ -97,3 +108,16 @@ function revealSite() {
 window.addEventListener('click', revealSite);
 window.addEventListener('keydown', revealSite);
 window.addEventListener('touchstart', revealSite);
+
+function showSuccessBar() {
+  const bar = document.getElementById("success-bar");
+  if (!bar) return;
+
+  bar.style.opacity = "1";
+
+  setTimeout(() => {
+    bar.style.opacity = "0";
+  }, 3000);
+}
+
+window.addEventListener("load", showSuccessBar);

@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@Lorb bio</title>
+  <title>@Lorb</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/tiktok.png" />
+  <link rel="icon" href="assets/website.png" />
 </head>
 <body>
-  <!-- Overlay with "Click to see" text -->
+  
   <div id="overlay">
     <div id="overlay-text">Click to see</div>
+  </div>
+  
+  <div id="success-bar">
+    <div class="progress"></div>
+    <span class="success-text">Successfully loaded @lorb</span>
   </div>
 
   <div class="custom-cursor"></div>
 
   <div class="container">
-    <img id="avatar" class="avatar" src="assets/avatar.png" alt="Discord Avatar" />
+    <!-- Wrap avatar inside avatar-wrapper for gradient border -->
+    <div class="avatar-wrapper">
+      <img id="avatar" class="avatar" src="assets/avatar.png" alt="Discord Avatar" />
+    </div>
 
     <h1 id="username" class="username">
       <span class="gradient-text">@6qyh</span>
@@ -24,10 +32,22 @@
 
     <div class="badges-highlight">
       <div class="badges">
-        <img src="assets/Owner.png" alt="Owner" title="Owner" />
-        <img src="assets/Developer.png" alt="Developer" title="Developer" />
-        <img src="assets/Verified.png" alt="Verified" title="Verified" />
-        <img src="assets/VIP.png" alt="VIP" title="VIP" />
+        <div class="badge-container">
+          <img src="assets/Owner.png" alt="Owner" class="badge" />
+          <div class="tooltip">Owner</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/Developer.png" alt="Developer" class="badge" />
+          <div class="tooltip">Developer</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/Verified.png" alt="Verified" class="badge" />
+          <div class="tooltip">Verified</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/VIP.png" alt="VIP" class="badge" />
+          <div class="tooltip">VIP</div>
+        </div>
       </div>
     </div>
 
@@ -54,10 +74,11 @@
       </a>
     </div>
 
-    <!-- Playing activity text -->
     <p id="playing" class="playing-activity"></p>
 
-    <!-- Hidden music player -->
+    <!-- ✅ ADDED: Activity box to display Discord presence -->
+    <div id="activity-box"></div>
+
     <audio id="background-music" src="assets/music.mp3" autoplay loop></audio>
   </div>
 
