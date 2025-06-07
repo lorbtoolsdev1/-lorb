@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@Lorb</title>
+  <title>@Lorb bio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/tiktok.png" />
-
-  <!-- Open Graph meta tags for Discord embed preview -->
-  <meta property="og:title" content="Discover @6qyh’s official bio page!" />
-  <meta property="og:description" content="Connect with me on TikTok, GitHub, and Spotify.
-Learn more about my work, achievements, and interests here!" />
-  <meta property="og:image" content="https://i.postimg.cc/Pq8nBj7Z/image-2025-06-07-170620421.jpg" />
-  <meta property="og:url" content="https://6qyh.vercel.app" />
-  <meta property="og:type" content="website" />
 </head>
 <body>
+  <!-- Overlay with "Click to see" text -->
+  <div id="overlay">
+    <div id="overlay-text">Click to see</div>
+  </div>
+
   <div class="custom-cursor"></div>
 
   <div class="container">
@@ -27,11 +24,18 @@ Learn more about my work, achievements, and interests here!" />
 
     <div class="badges-highlight">
       <div class="badges">
-        <img src="assets/Owner.png" alt="Owner" />
-        <img src="assets/Developer.png" alt="Developer" />
-        <img src="assets/Verified.png" alt="Verified" />
-        <img src="assets/VIP.png" alt="VIP" />
+        <img src="assets/Owner.png" alt="Owner" title="Owner" />
+        <img src="assets/Developer.png" alt="Developer" title="Developer" />
+        <img src="assets/Verified.png" alt="Verified" title="Verified" />
+        <img src="assets/VIP.png" alt="VIP" title="VIP" />
       </div>
+    </div>
+
+    <div class="status-buttons">
+      <button class="status-btn status-online" data-status="online">Online</button>
+      <button class="status-btn status-idle" data-status="idle">Idle</button>
+      <button class="status-btn status-dnd" data-status="dnd">Do Not Disturb</button>
+      <button class="status-btn status-offline" data-status="offline">Offline</button>
     </div>
 
     <p class="description">
@@ -49,6 +53,12 @@ Learn more about my work, achievements, and interests here!" />
         <img src="assets/spotify.png" alt="Spotify" class="icon" />
       </a>
     </div>
+
+    <!-- Playing activity text -->
+    <p id="playing" class="playing-activity"></p>
+
+    <!-- Hidden music player -->
+    <audio id="background-music" src="assets/music.mp3" autoplay loop></audio>
   </div>
 
   <script src="script.js"></script>

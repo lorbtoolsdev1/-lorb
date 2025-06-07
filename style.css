@@ -24,7 +24,42 @@ body {
   border-radius: 25px;
   backdrop-filter: blur(12px);
   text-align: center;
+  transition: filter 0.5s ease;
 }
+
+/* Blur effect when active */
+.container.blur {
+  filter: blur(12px);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Overlay covering the entire viewport */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+#overlay-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  user-select: none;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Your existing styles below */
 
 .avatar {
   width: 120px;
@@ -36,6 +71,12 @@ body {
 
 #status {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .dot {
@@ -45,10 +86,21 @@ body {
   border-radius: 50%;
 }
 
-.status-online { background-color: #43b581; }
-.status-idle { background-color: #faa61a; }
-.status-dnd { background-color: #f04747; }
-.status-offline { background-color: #747f8d; }
+.status-online {
+  background-color: #43b581;
+}
+
+.status-idle {
+  background-color: #faa61a;
+}
+
+.status-dnd {
+  background-color: #f04747;
+}
+
+.status-offline {
+  background-color: #747f8d;
+}
 
 .username-line {
   display: flex;
@@ -66,10 +118,21 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #000000, #444444, #aaaaaa);
+  background: linear-gradient(90deg, black, grey, white, grey, black);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
 }
 
 .normal-text {
@@ -142,4 +205,44 @@ body {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* New status buttons styles */
+.status-buttons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.status-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: default;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.status-btn.status-online {
+  background-color: #43b581;
+}
+
+.status-btn.status-idle {
+  background-color: #faa61a;
+}
+
+.status-btn.status-dnd {
+  background-color: #f04747;
+}
+
+.status-btn.status-offline {
+  background-color: #747f8d;
+}
+
+.status-btn.active {
+  box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.7);
 }
