@@ -1,0 +1,145 @@
+* {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url("assets/background.gif") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 700px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+#status {
+  margin-bottom: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.status-online { background-color: #43b581; }
+.status-idle { background-color: #faa61a; }
+.status-dnd { background-color: #f04747; }
+.status-offline { background-color: #747f8d; }
+
+.username-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#username {
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #000000, #444444, #aaaaaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.normal-text {
+  color: white;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.badges-highlight {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.badges-highlight:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.badges img {
+  width: 28px;
+  height: 28px;
+  margin-left: 3px;
+}
+
+.description {
+  font-size: 15px;
+  margin: 15px 0 20px;
+  font-family: 'Georgia', serif;
+  opacity: 0.85;
+}
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+}
+
+.custom-cursor {
+  width: 32px;
+  height: 32px;
+  background: url("assets/cursor.png") no-repeat center;
+  background-size: contain;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
