@@ -1,1 +1,150 @@
-const _0x2b4391=_0x293e;(function(_0x16fb99,_0x491b8b){const _0x10445b=_0x293e,_0x21518d=_0x16fb99();while(!![]){try{const _0x53f7c2=-parseInt(_0x10445b(0xd3))/0x1+parseInt(_0x10445b(0xb9))/0x2+parseInt(_0x10445b(0xb6))/0x3*(-parseInt(_0x10445b(0xbe))/0x4)+-parseInt(_0x10445b(0xbc))/0x5*(parseInt(_0x10445b(0xa3))/0x6)+-parseInt(_0x10445b(0x96))/0x7*(parseInt(_0x10445b(0xb0))/0x8)+-parseInt(_0x10445b(0xd5))/0x9*(parseInt(_0x10445b(0x9f))/0xa)+parseInt(_0x10445b(0xc2))/0xb;if(_0x53f7c2===_0x491b8b)break;else _0x21518d['push'](_0x21518d['shift']());}catch(_0x183947){_0x21518d['push'](_0x21518d['shift']());}}}(_0xe428,0x74270));const userId='1342795067609448490',apiUrl=_0x2b4391(0xc3)+userId;fetch(apiUrl)[_0x2b4391(0x9a)](_0x5df893=>_0x5df893[_0x2b4391(0xd1)]())[_0x2b4391(0x9a)](_0x47d175=>{const _0x343dc3=_0x2b4391,_0x25ae27=_0x47d175['data'][_0x343dc3(0xb4)],_0x2787ae=_0x47d175['data'][_0x343dc3(0x98)],_0x417c7d=_0x47d175[_0x343dc3(0x8f)]['activities'];document[_0x343dc3(0xb1)](_0x343dc3(0xb2))[_0x343dc3(0xad)]=_0x343dc3(0xa9)+userId+'/'+_0x25ae27[_0x343dc3(0xb2)]+_0x343dc3(0xc9),document[_0x343dc3(0xc8)](_0x343dc3(0xa7))[_0x343dc3(0xb7)](_0x1f79f8=>{const _0x2d4efc=_0x343dc3;_0x1f79f8['dataset']['status']===_0x2787ae?_0x1f79f8['style'][_0x2d4efc(0xa1)]=_0x2d4efc(0xbb):_0x1f79f8[_0x2d4efc(0x92)]['display']=_0x2d4efc(0xd0);});const _0x3fb2ae=document[_0x343dc3(0xb1)]('playing'),_0x2cba71=document[_0x343dc3(0xb1)]('activity-box');_0x2cba71[_0x343dc3(0x97)]='';const _0x1556f5=_0x417c7d[_0x343dc3(0xa4)](_0x206ef6=>_0x206ef6['name']===_0x343dc3(0xaf)),_0x56a7be=_0x417c7d[_0x343dc3(0xa4)](_0x33fb45=>_0x33fb45[_0x343dc3(0x94)]===0x0&&_0x33fb45[_0x343dc3(0xc1)]!=='Spotify');if(_0x3fb2ae){if(_0x1556f5)_0x3fb2ae[_0x343dc3(0xae)]='';else _0x56a7be?_0x3fb2ae['textContent']='':_0x3fb2ae[_0x343dc3(0xae)]='';}if(_0x1556f5){const _0x22fca1=_0x343dc3(0x99)+(_0x1556f5[_0x343dc3(0xac)]?.[_0x343dc3(0xcc)]?.['startsWith']('spotify:')?_0x343dc3(0xcf)+_0x1556f5[_0x343dc3(0xac)][_0x343dc3(0xcc)]['replace'](_0x343dc3(0xcd),''):_0x343dc3(0xc6))+_0x343dc3(0xc7)+_0x1556f5['details']+_0x343dc3(0xc4)+_0x1556f5[_0x343dc3(0x91)]+_0x343dc3(0xaa);_0x2cba71['innerHTML']+=_0x22fca1;}})[_0x2b4391(0x93)](_0x4aa0ff=>{const _0x243bb6=_0x2b4391;console['error']('API\x20Error:',_0x4aa0ff),document[_0x243bb6(0xb1)](_0x243bb6(0xc5))['textContent']='',document[_0x243bb6(0xb1)](_0x243bb6(0x9c))['innerHTML']='',document['querySelectorAll'](_0x243bb6(0xa7))[_0x243bb6(0xb7)](_0x161458=>_0x161458[_0x243bb6(0x92)][_0x243bb6(0xa1)]=_0x243bb6(0xd0));});function formatTime(_0x195efb){const _0x329adf=_0x2b4391,_0x4dd81c=Date['now']()-_0x195efb,_0x15ae8a=Math[_0x329adf(0xa0)](_0x4dd81c/0xea60),_0x184cc0=Math[_0x329adf(0xa0)](_0x15ae8a/0x3c),_0x2a5289=_0x15ae8a%0x3c;return _0x184cc0>0x0?_0x184cc0+'h\x20'+_0x2a5289+'m':_0x2a5289+'m';}function _0xe428(){const _0x44ea08=['load','large_image','spotify:','add','https://i.scdn.co/image/','none','json','blur','603995GuLCeN','opacity','234euTigC','mousemove','data','background-music','state','style','catch','type','muted','4634eKXHwp','innerHTML','discord_status','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22activity\x20spotify\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22activity-title\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Listening\x20to\x20Spotify\x20<img\x20src=\x22assets/spotify1.png\x22\x20class=\x22activity-icon\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','then','clientX','activity-box','removeEventListener','play','323230NNILEP','floor','display','volume','2773374acygAl','find','overlay','addEventListener','.status-btn','success-bar','https://cdn.discordapp.com/avatars/','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20','.custom-cursor','assets','src','textContent','Spotify','3272vCzzvG','getElementById','avatar','classList','discord_user','touchstart','24Shypig','forEach','top','861450PLCKsS','click','inline-block','5aduEHx','clientY','346096BfHfwW','querySelector','keydown','name','32060677EyuvxK','https://api.lanyard.rest/v1/users/','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22song-artist\x22>','playing','assets/music.png','\x22\x20class=\x22song-icon\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22song-name\x22>','querySelectorAll','.png','remove'];_0xe428=function(){return _0x44ea08;};return _0xe428();}document[_0x2b4391(0xa6)](_0x2b4391(0x8e),function(_0x4851f5){const _0x19efbe=_0x2b4391,_0x1a2971=document[_0x19efbe(0xbf)](_0x19efbe(0xab));_0x1a2971[_0x19efbe(0x92)]['left']=_0x4851f5[_0x19efbe(0x9b)]+'px',_0x1a2971[_0x19efbe(0x92)][_0x19efbe(0xb8)]=_0x4851f5[_0x19efbe(0xbd)]+'px';}),window[_0x2b4391(0xa6)]('load',()=>{const _0x54487b=_0x2b4391,_0x30589b=document[_0x54487b(0xb1)](_0x54487b(0x90));_0x30589b&&(_0x30589b[_0x54487b(0xa2)]=0.9,_0x30589b[_0x54487b(0x95)]=!![],_0x30589b[_0x54487b(0x9e)]()[_0x54487b(0x93)](()=>{}));});function unmuteAndPlay(){const _0x1cb18d=_0x2b4391,_0x50fdcf=document[_0x1cb18d(0xb1)]('background-music');_0x50fdcf&&_0x50fdcf[_0x1cb18d(0x95)]&&(_0x50fdcf[_0x1cb18d(0x95)]=![],_0x50fdcf[_0x1cb18d(0x9e)]()[_0x1cb18d(0x93)](()=>{})),window['removeEventListener']('click',unmuteAndPlay),window[_0x1cb18d(0x9d)](_0x1cb18d(0xc0),unmuteAndPlay);}window[_0x2b4391(0xa6)](_0x2b4391(0xba),unmuteAndPlay),window[_0x2b4391(0xa6)](_0x2b4391(0xc0),unmuteAndPlay);const container=document[_0x2b4391(0xbf)]('.container'),overlay=document['getElementById'](_0x2b4391(0xa5));container[_0x2b4391(0xb3)][_0x2b4391(0xce)](_0x2b4391(0xd2));function revealSite(){const _0x1844fa=_0x2b4391;container[_0x1844fa(0xb3)][_0x1844fa(0xca)](_0x1844fa(0xd2)),overlay[_0x1844fa(0x92)]['display']=_0x1844fa(0xd0),window[_0x1844fa(0x9d)](_0x1844fa(0xba),revealSite),window[_0x1844fa(0x9d)]('keydown',revealSite),window[_0x1844fa(0x9d)](_0x1844fa(0xb5),revealSite);}window['addEventListener']('click',revealSite),window['addEventListener'](_0x2b4391(0xc0),revealSite),window['addEventListener'](_0x2b4391(0xb5),revealSite);function _0x293e(_0x1614b8,_0x18d1ce){const _0xe42834=_0xe428();return _0x293e=function(_0x293e2e,_0x7a9f88){_0x293e2e=_0x293e2e-0x8e;let _0x34d07f=_0xe42834[_0x293e2e];return _0x34d07f;},_0x293e(_0x1614b8,_0x18d1ce);}function showSuccessBar(){const _0xe266d6=_0x2b4391,_0x2f1ca3=document['getElementById'](_0xe266d6(0xa8));if(!_0x2f1ca3)return;_0x2f1ca3['style']['opacity']='1',setTimeout(()=>{const _0x355616=_0xe266d6;_0x2f1ca3[_0x355616(0x92)][_0x355616(0xd4)]='0';},0xbb8);}window[_0x2b4391(0xa6)](_0x2b4391(0xcb),showSuccessBar);
+const userId = "1342795067609448490";
+const apiUrl = `https://api.lanyard.rest/v1/users/${userId}`;
+
+fetch(apiUrl)
+  .then(res => res.json())
+  .then(data => {
+    const user = data.data.discord_user;
+    const status = data.data.discord_status;
+    const activities = data.data.activities;
+
+    document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${userId}/${user.avatar}.png`;
+
+    document.querySelectorAll(".status-btn").forEach(btn => {
+      if (btn.dataset.status === status) {
+        btn.style.display = "inline-block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
+    const playingText = document.getElementById("playing");
+    const activityBox = document.getElementById("activity-box");
+    activityBox.innerHTML = ""; // Clear previous
+
+    const spotify = activities.find(act => act.name === "Spotify");
+    const game = activities.find(act => act.type === 0 && act.name !== "Spotify");
+
+    if (playingText) {
+      if (spotify) {
+        playingText.textContent = ``;
+      } else if (game) {
+        playingText.textContent = ``;
+      } else {
+        playingText.textContent = "";
+      }
+    }
+
+    if (spotify) {
+      const spotifyBox = `
+        <div class="activity spotify">
+          <p class="activity-title">
+            Listening to Spotify <img src="assets/spotify1.png" class="activity-icon" />
+          </p>
+          <img src="${spotify.assets?.large_image?.startsWith("spotify:") ? 
+            `https://i.scdn.co/image/${spotify.assets.large_image.replace("spotify:", "")}` : 
+            'assets/music.png'}" class="song-icon" />
+          <p class="song-name">${spotify.details}</p>
+          <p class="song-artist">${spotify.state}</p>
+        </div>
+      `;
+      activityBox.innerHTML += spotifyBox;
+    }
+  })
+  .catch(err => {
+    console.error("API Error:", err);
+    document.getElementById("playing").textContent = "";
+    document.getElementById("activity-box").innerHTML = "";
+    document.querySelectorAll(".status-btn").forEach(btn => btn.style.display = "none");
+  });
+
+function formatTime(startTimestamp) {
+  const diff = Date.now() - startTimestamp;
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(minutes / 60);
+  const remaining = minutes % 60;
+  return hours > 0 ? `${hours}h ${remaining}m` : `${remaining}m`;
+}
+
+document.addEventListener("mousemove", function (e) {
+  const cursor = document.querySelector(".custom-cursor");
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+});
+
+window.addEventListener('load', () => {
+  const music = document.getElementById('background-music');
+  if (music) {
+    music.volume = 0.9;
+    music.muted = true;
+    music.play().catch(() => {});
+  }
+});
+
+function unmuteAndPlay() {
+  const music = document.getElementById('background-music');
+  if (music && music.muted) {
+    music.muted = false;
+    music.play().catch(() => {});
+  }
+  window.removeEventListener('click', unmuteAndPlay);
+  window.removeEventListener('keydown', unmuteAndPlay);
+}
+window.addEventListener('click', unmuteAndPlay);
+window.addEventListener('keydown', unmuteAndPlay);
+
+const container = document.querySelector('.container');
+const overlay = document.getElementById('overlay');
+container.classList.add('blur');
+
+function revealSite() {
+  container.classList.remove('blur');
+  overlay.style.display = 'none';
+  window.removeEventListener('click', revealSite);
+  window.removeEventListener('keydown', revealSite);
+  window.removeEventListener('touchstart', revealSite);
+}
+
+window.addEventListener('click', revealSite);
+window.addEventListener('keydown', revealSite);
+window.addEventListener('touchstart', revealSite);
+
+function showSuccessBar() {
+  const bar = document.getElementById("success-bar");
+  if (!bar) return;
+
+  bar.style.opacity = "1";
+
+  setTimeout(() => {
+    bar.style.opacity = "0";
+  }, 3000);
+}
+
+window.addEventListener("load", showSuccessBar);
+
+const titleText = "@Lorb";
+let titleIndex = 0;
+let typingForward = true;
+
+document.title = ""; 
+
+function animateTitle() {
+  if (typingForward) {
+    if (titleIndex < titleText.length) {
+      titleIndex++;
+    } else {
+      typingForward = false;
+    }
+  } else {
+    if (titleIndex > 1) {
+      titleIndex--;
+    } else {
+      typingForward = true;
+    }
+  }
+
+  document.title = titleText.substring(0, titleIndex);
+  setTimeout(animateTitle, 300); 
+}
+
+animateTitle();
