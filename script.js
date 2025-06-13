@@ -7,7 +7,7 @@ fetch(apiUrl)
     const user = data.data.discord_user;
     const status = data.data.discord_status;
     const activities = data.data.activities;
-
+    
     document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${userId}/${user.avatar}.png`;
 
     document.querySelectorAll(".status-btn").forEach(btn => {
