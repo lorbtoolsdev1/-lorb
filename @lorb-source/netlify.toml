@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/@lorb/*"
+  to = "/@lorb/:splat"
+  status = 200
