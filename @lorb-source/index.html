@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@Lorb</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/website.png" />
+  <meta property="og:title" content="Absolute Being | @6qyh " />
+  <meta property="og:description" content="Justice will prevail because the winner will decide what is right" />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1380262186978509041/1382872989951070218/67137315-64CF-4555-BD4B-E2122F69441C.jpg?ex=684cbc55&is=684b6ad5&hm=4774707c79ea3fa1328f82ec9b9949d373a700819dd89f39c3e77b5c9d5ad203&" />
+  <meta property="og:url" content="https://rebrand.ly/Lorb" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="assets/background.mp4" type="video/mp4" />
+  </video>
+
+  <div id="overlay">
+    <div id="overlay-text">Click to enter...</div>
+  </div>
+  
+  <div id="success-bar">
+    <div class="progress"></div>
+    <span class="success-text">Successfully loaded @lorb</span>
+  </div>
+
+  <div class="custom-cursor"></div>
+
+  <div class="container">
+    <!-- Wrap avatar inside avatar-wrapper for gradient border -->
+    <div class="avatar-wrapper">
+      <img id="avatar" class="avatar" src="assets/avatar.png" alt="Discord Avatar" />
+    </div>
+
+    <h1 id="username" class="username">
+      <span class="gradient-text">@6qyh
+      </span>
+    </h1>
+
+    <div class="badges-highlight">
+      <div class="badges">
+        <div class="badge-container">
+          <img src="assets/Owner.png" alt="Owner" class="badge" />
+          <div class="tooltip">Owner</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/staff.png" alt="Developer" class="badge" />
+          <div class="tooltip">Developer</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/lorb.png" alt="lorb" class="badge" />
+          <div class="tooltip">Lorb</div>
+        </div>
+        <div class="badge-container">
+          <img src="assets/bug.png" alt="Verified" class="badge" />
+          <div class="tooltip">webBugs hunnter</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-buttons">
+      <button class="status-btn status-online" data-status="online">
+        <img src="assets/online.png" alt="Online" class="status-icon" />
+        Online
+      </button>
+      <button class="status-btn status-idle" data-status="idle">
+        <img src="assets/idle.png" alt="Idle" class="status-icon" />
+        Idle
+      </button>
+      <button class="status-btn status-dnd" data-status="dnd">
+        <img src="assets/dnd.png" alt="Do Not Disturb" class="status-icon" />
+        Do Not Disturb
+      </button>
+      <button class="status-btn status-offline" data-status="offline">
+        <img src="assets/offline.png" alt="Offline" class="status-icon" />
+        Offline
+      </button>
+    </div>
+
+    <p class="description">
+      Justice will prevail because the winner will decide what is right
+    </p>
+
+    <div class="links">
+      <a href="https://www.roblox.com/users/794431036/profile" class="icon-link" target="_blank">
+        <img src="assets/roblox.png" alt="roblox" class="icon" />
+      </a>
+      <a href="https://github.com/lorbtoolsdev1" class="icon-link" target="_blank">
+        <img src="assets/github.png" alt="GitHub" class="icon" />
+      </a>
+      <a href="https://open.spotify.com/user/31jxk3imbwovmlsmhyfmvh3kgyim" class="icon-link" target="_blank">
+        <img src="assets/spotify.png" alt="Spotify" class="icon" />
+      </a>
+    </div>
+
+    <p id="playing" class="playing-activity"></p>
+
+    <!-- ✅ ADDED: Activity box to display Discord presence -->
+    <div id="activity-box"></div>
+
+    <audio id="background-music" src="assets/music.mp3" autoplay loop></audio>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
